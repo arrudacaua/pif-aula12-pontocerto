@@ -6,6 +6,17 @@
 
 -- ---------- Desafio 1: regras guardadas em variaveis ----------
 
+semCampanha :: Int -> Int
+semCampanha p = p
+
+pontosEmDobro :: Int -> Int
+pontosEmDobro = \p -> p * 2
+
+bonus50 :: Int -> Int
+bonus50 = \p -> p + 50
+
+campanhaDaSemana :: Int -> Int
+campanhaDaSemana = pontosEmDobro
 
 -- ---------- Desafio 2: uma funcao que recebe a regra ----------
 
