@@ -4,7 +4,7 @@
 
 | Papel | Nome completo | Usuário do GitHub |
 |---|---|---|
-| Integrante 1 (dono do fork) | | |
+| Integrante 1 (dono do fork) | Cauã Ferreira Arruda | arrudacaua |
 | Integrante 2 (colaborador) | | |
 
 ## Explicação da solução
