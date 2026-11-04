@@ -39,6 +39,8 @@ aniversarioCliente = campanhaBonus 200
 
 -- ---------- Desafio 4: campanhas acumuladas ----------
 
+acumula :: (Int -> Int) -> (Int -> Int) -> Int -> Int
+acumula regra1 regra2 valor = regra2 (regra1 valor)
 
 -- ---------- Testes (descomente conforme avancar) ----------
 -- Ao descomentar, apague "-- " (os dois tracos E o espaco).
@@ -46,26 +48,28 @@ aniversarioCliente = campanhaBonus 200
 main :: IO ()
 main = do
   putStrLn "--- Desafio 1 ---"
-    print (semCampanha 120)
-    print (pontosEmDobro 120)
-    print (bonus50 120)
-    print (campanhaDaSemana 120)
+  print (semCampanha 120)
+  print (pontosEmDobro 120)
+  print (bonus50 120)
+  print (campanhaDaSemana 120)
   putStrLn "--- Desafio 2 ---"
-    print (calculaPontos semCampanha 80)
-    print (calculaPontos pontosEmDobro 80)
-    print (calculaPontos bonus50 80)
+  print (calculaPontos semCampanha 80)
+  print (calculaPontos pontosEmDobro 80)
+  print (calculaPontos bonus50 80)
 
-    -- Promocao Relampago: triplo de pontos
-    print (calculaPontos (\p -> p * 3) 80)
+  -- Promocao Relampago: triplo de pontos
+  print (calculaPontos (\p -> p * 3) 80)
 
-    -- Quarta Verde: dobro de pontos + 10
-    print (calculaPontos (\p -> p * 2 + 10) 80)
+  -- Quarta Verde: dobro de pontos + 10
+  print (calculaPontos (\p -> p * 2 + 10) 80)
   putStrLn "--- Desafio 3 ---"
-    print (calculaPontos blackFriday 150)
-    print (calculaPontos aniversarioCliente 150)
-    print (calculaPontos (campanhaMultiplicadora 4) 25)
-    print (calculaPontos (campanhaBonus 30) 25)
+  print (calculaPontos blackFriday 150)
+  print (calculaPontos aniversarioCliente 150)
+  print (calculaPontos (campanhaMultiplicadora 4) 25)
+  print (calculaPontos (campanhaBonus 30) 25)
   putStrLn "--- Desafio 4 ---"
-  -- print (acumula blackFriday aniversarioCliente 150)
-  -- print (acumula aniversarioCliente blackFriday 150)
-  -- Semana do Cliente (escrevam a chamada aqui):
+  print (acumula blackFriday aniversarioCliente 150)
+  print (acumula aniversarioCliente blackFriday 150)
+
+  -- Semana do Cliente: triplo de pontos e depois bonus de 100
+  print (acumula (\p -> p * 3) (\p -> p + 100) 60)
