@@ -46,10 +46,10 @@ aniversarioCliente = campanhaBonus 200
 main :: IO ()
 main = do
   putStrLn "--- Desafio 1 ---"
-  -- print (semCampanha 120)
-  -- print (pontosEmDobro 120)
-  -- print (bonus50 120)
-  -- print (campanhaDaSemana 120)
+    print (semCampanha 120)
+    print (pontosEmDobro 120)
+    print (bonus50 120)
+    print (campanhaDaSemana 120)
   putStrLn "--- Desafio 2 ---"
     print (calculaPontos semCampanha 80)
     print (calculaPontos pontosEmDobro 80)
